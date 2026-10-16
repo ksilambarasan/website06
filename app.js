@@ -151,11 +151,8 @@ function renderInternships() {
         ${item.tags.map(t => `<span class="tag">${t}</span>`).join('')}
       </div>
 
-      <div class="card-footer">
-        <div class="stipend">
-          ${item.stipend}<span>/mo</span>
-        </div>
-        <button class="btn btn-primary btn-sm" onclick="openApplyModal('${item.id}', '${item.title}', '${item.company}')">
+      <div class="card-footer" style="justify-content: flex-end;">
+        <button class="btn btn-primary btn-sm" style="width: 100%;" onclick="openApplyModal('${item.id}', '${item.title}', '${item.company}')">
           Apply Now
         </button>
       </div>
