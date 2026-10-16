@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>InternBench — Verified Skill-Benchmarked Tech Internships</title>
+  <meta name="description" content="Discover top tech internships with proven skill benchmarks. Skip resume screens with verified coding scores.">
+  
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&family=Plus+Jakarta+Sans:wght@600;700;800&display=swap" rel="stylesheet">
+  
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+  <!-- Navigation Bar -->
+  <header class="navbar">
+    <div class="container nav-container">
+      <a href="#" class="brand-logo" id="brand-logo-link">
+        <div class="logo-badge">IB</div>
+        <span>InternBench</span>
+      </a>
+
+      <nav>
+        <ul class="nav-links">
+          <li><a href="#internships" class="nav-link active">Find Internships</a></li>
+          <li><a href="#benchmarks" class="nav-link">Skill Benchmarks</a></li>
+          <li><a href="#companies" class="nav-link">For Employers</a></li>
+        </ul>
+      </nav>
+
+      <div class="nav-actions">
+        <a href="#benchmarks" class="btn btn-outline btn-sm" id="btn-take-benchmark">Take Benchmark</a>
+        <a href="#internships" class="btn btn-primary btn-sm" id="btn-browse-roles">Browse Roles</a>
+      </div>
+    </div>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero-section">
+    <div class="container">
+      <div class="hero-pill">
+        <span class="dot"></span>
+        <span>Over 1,200+ Verified Summer 2026 Internships Live</span>
+      </div>
+
+      <h1 class="hero-title">
+        Skip The Resume Screen.<br>
+        Get Hired on <span class="hero-gradient-text">Verified Benchmarks</span>.
+      </h1>
+
+      <p class="hero-desc">
+        InternBench connects top student engineers, designers, and researchers with vetted startups and tier-1 tech companies through objective skill evaluations.
+      </p>
+
+      <!-- Search & Filter Controls -->
+      <div class="search-box-wrapper">
+        <div class="search-input-group">
+          <span>🔍</span>
+          <input type="text" id="searchInput" placeholder="Search by role, company, or tech stack (e.g., React, Go)..." aria-label="Search internships">
+        </div>
+        <div class="search-input-group" style="max-width: 200px;">
+          <span>🌐</span>
+          <select id="locationSelect" aria-label="Filter by location type">
+            <option value="all">All Locations</option>
+            <option value="remote">Remote Only</option>
+            <option value="hybrid">Hybrid</option>
+            <option value="onsite">On-site</option>
+          </select>
+        </div>
+      </div>
+
+      <!-- Quick Metrics -->
+      <div class="stats-banner">
+        <div class="stat-item">
+          <div class="stat-num">$2,100</div>
+          <div class="stat-label">Average Monthly Stipend</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">94%</div>
+          <div class="stat-label">Interview Conversion Rate</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">450+</div>
+          <div class="stat-label">Partner Tech Companies</div>
+        </div>
+        <div class="stat-item">
+          <div class="stat-num">3 Days</div>
+          <div class="stat-label">Fast-track Response Time</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Internships Section -->
+  <main class="container" id="internships" style="padding-top: 40px;">
+    <div class="section-header">
+      <div>
+        <h2 class="section-title">Featured Opportunities</h2>
+        <p class="section-subtitle">Real opportunities vetted by skill requirements and verified engineering compensation.</p>
+      </div>
+
+      <!-- Filter Buttons -->
+      <div class="filter-tabs">
+        <button class="filter-btn active" data-filter="all">All</button>
+        <button class="filter-btn" data-filter="frontend">Frontend</button>
+        <button class="filter-btn" data-filter="backend">Backend</button>
+        <button class="filter-btn" data-filter="ai">AI / ML</button>
+        <button class="filter-btn" data-filter="design">Design</button>
+        <button class="filter-btn" data-filter="data">Data</button>
+      </div>
+    </div>
+
+    <!-- Dynamic Card Grid -->
+    <div class="cards-grid" id="internshipsGrid">
+      <!-- Populated via app.js -->
+    </div>
+  </main>
+
+  <!-- Skill Benchmarking Features -->
+  <section class="features-section" id="benchmarks">
+    <div class="container">
+      <div style="text-align: center; max-width: 600px; margin: 0 auto;">
+        <h2 class="section-title">Why InternBench?</h2>
+        <p class="section-subtitle">A modern benchmark standard trusted by engineering leaders globally.</p>
+      </div>
+
+      <div class="feature-grid">
+        <div class="feature-card">
+          <div class="feature-icon">⚡</div>
+          <h3>Practical Coding Proctored Tests</h3>
+          <p>No arbitrary LeetCode brainteasers. Solve real pull requests, fix real production bugs, and deploy realistic systems.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🛡️</div>
+          <h3>Verified Score Badge</h3>
+          <p>Earn an encrypted benchmark score badge that guarantees your profile lands on the top of hiring manager review queues.</p>
+        </div>
+
+        <div class="feature-card">
+          <div class="feature-icon">🤝</div>
+          <h3>Direct Fast-Track Interviews</h3>
+          <p>Candidates scoring above 85% bypass HR filtering and jump straight into final-round technical discussions.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- Modal Apply Dialog -->
+  <div class="modal-overlay" id="applyModal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+    <div class="modal-content">
+      <button class="modal-close" onclick="closeApplyModal()" aria-label="Close modal">✕</button>
+      <h3 id="modalTitle" style="font-size: 1.35rem; margin-bottom: 8px;">Apply for Internship</h3>
+      <p style="color: var(--text-secondary); font-size: 0.9rem; margin-bottom: 20px;">Submit your profile and benchmark score to get directly considered.</p>
+
+      <form id="applyForm">
+        <div class="form-group">
+          <label for="modalRoleTitle">Position</label>
+          <input type="text" id="modalRoleTitle" readonly style="opacity: 0.8; cursor: not-allowed;">
+        </div>
+
+        <div class="form-group">
+          <label for="applicantName">Full Name</label>
+          <input type="text" id="applicantName" placeholder="e.g. Alex Chen" required>
+        </div>
+
+        <div class="form-group">
+          <label for="applicantEmail">Email Address</label>
+          <input type="email" id="applicantEmail" placeholder="alex@university.edu" required>
+        </div>
+
+        <div class="form-group">
+          <label for="githubUrl">GitHub / Portfolio URL</label>
+          <input type="url" id="githubUrl" placeholder="https://github.com/alexchen" required>
+        </div>
+
+        <button type="submit" class="btn btn-primary" style="width: 100%; margin-top: 10px;">
+          Submit Application
+        </button>
+      </form>
+    </div>
+  </div>
+
+  <!-- Toast Container -->
+  <div class="toast-container" id="toastContainer"></div>
+
+  <!-- Footer -->
+  <footer>
+    <div class="container">
+      <div class="footer-content">
+        <div class="footer-column">
+          <div class="brand-logo" style="margin-bottom: 12px;">
+            <div class="logo-badge">IB</div>
+            <span>InternBench</span>
+          </div>
+          <p style="color: var(--text-secondary); font-size: 0.9rem; max-width: 320px;">
+            The performance-based talent launchpad connecting tomorrow's top builders with engineering teams building the future.
+          </p>
+        </div>
+
+        <div class="footer-column">
+          <h5>Candidates</h5>
+          <ul class="footer-links">
+            <li><a href="#internships">Browse Roles</a></li>
+            <li><a href="#benchmarks">Benchmark Library</a></li>
+            <li><a href="#">Candidate Guide</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Employers</h5>
+          <ul class="footer-links">
+            <li><a href="#">Post an Internship</a></li>
+            <li><a href="#">Hire Benchmarked Talent</a></li>
+            <li><a href="#">Enterprise Solutions</a></li>
+          </ul>
+        </div>
+
+        <div class="footer-column">
+          <h5>Platform</h5>
+          <ul class="footer-links">
+            <li><a href="#">Privacy Policy</a></li>
+            <li><a href="#">Terms of Service</a></li>
+            <li><a href="#">Security</a></li>
+          </ul>
+        </div>
+      </div>
+
+      <div class="copyright">
+        © 2026 Internbench. All rights reserved. Built for webapp06.
+      </div>
+    </div>
+  </footer>
+
+  <script src="app.js"></script>
+</body>
+</html>
