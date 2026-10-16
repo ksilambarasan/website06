@@ -163,12 +163,11 @@ function renderInternships() {
   `).join('');
 }
 
-// Modal handling
+const GOOGLE_FORM_URL = "https://forms.gle/aoNQjBSvWQPqfqt77";
+
+// Handle Apply / Register
 function openApplyModal(id, title, company) {
-  const modal = document.getElementById('applyModal');
-  const roleInput = document.getElementById('modalRoleTitle');
-  if (roleInput) roleInput.value = `${title} at ${company}`;
-  if (modal) modal.classList.add('active');
+  window.open(GOOGLE_FORM_URL, '_blank', 'noopener,noreferrer');
 }
 
 function closeApplyModal() {
